@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ stage }} - {{ module }} 数据</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ stage }} - {{ module }}</h1>
+        <div class="button-group">
+            {% for submodule, value in submodules.items() %}
+                <a href="/submodule/{{ stage }}/{{ module }}/{{ submodule }}" class="button">{{ submodule }}</a>
+            {% endfor %}
+        </div>
+        <a href="/stage/{{ stage }}" class="button back-button">返回</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ stage }} - {{ module }} - {{ submodule }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ stage }} - {{ module }} - {{ submodule }}</h1>
+        <p>数据: {{ value }}</p>
+        <a href="/module/{{ stage }}/{{ module }}" class="button back-button">返回</a>
+    </div>
+</body>
+</html>
